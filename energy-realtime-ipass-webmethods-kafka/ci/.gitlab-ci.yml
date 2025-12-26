@@ -1,0 +1,8 @@
+stages: [validate]
+
+validate_contracts:
+  image: python:3.12-slim
+  stage: validate
+  script:
+    - pip install -q jsonschema
+    - python -c "import json,glob; from jsonschema import Draft202012Validator; [Draft202012Validator.check_schema(json.load(open(p))) for p in glob.glob('contracts/schemas/*.json')]; print('OK')"

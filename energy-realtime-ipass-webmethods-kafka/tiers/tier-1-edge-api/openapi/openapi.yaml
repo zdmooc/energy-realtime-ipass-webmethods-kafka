@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: Energy Real-Time API (Example)
+  version: 0.1.0
+paths:
+  /v1/meter-readings:
+    post:
+      summary: Push meter reading (sync -> async)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ../../../../contracts/schemas/grid.meter.reading.v1.json
+      responses:
+        "202":
+          description: Accepted

@@ -1,0 +1,8 @@
+---
+- name: Checks environnement projet (placeholder)
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Print message
+      ansible.builtin.debug:
+        msg: "TODO: intégrer checks cluster, kafka, webMethods, secrets, etc."

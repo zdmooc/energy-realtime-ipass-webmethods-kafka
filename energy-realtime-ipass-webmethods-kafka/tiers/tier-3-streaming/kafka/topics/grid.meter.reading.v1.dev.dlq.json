@@ -1,0 +1,9 @@
+{
+  "name": "grid.meter.reading.v1.dev.dlq",
+  "partitions": 3,
+  "replicationFactor": 1,
+  "config": {
+    "retention.ms": 1209600000,
+    "cleanup.policy": "delete"
+  }
+}

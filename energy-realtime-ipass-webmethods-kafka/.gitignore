@@ -1,0 +1,22 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Evidence / outputs
+evidence/**/*.log
+evidence/**/*.json
+evidence/**/*.txt
+evidence/**/*.png
+
+# Local
+.env
+local-dev/.env
+local-dev/data/
+local-dev/volumes/
+
+# Java
+**/target/
+**/*.class
+**/*.jar

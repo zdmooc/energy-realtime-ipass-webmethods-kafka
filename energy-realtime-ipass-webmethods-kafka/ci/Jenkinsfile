@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  stages {
+    stage('Lint & Validate contracts') {
+      steps {
+        sh 'python -m pip install --quiet jsonschema'
+        sh 'python -c "import json,glob; from jsonschema import Draft202012Validator; [Draft202012Validator.check_schema(json.load(open(p))) for p in glob.glob('contracts/schemas/*.json')]; print('OK')"'
+      }
+    }
+    stage('Package (placeholder)') {
+      steps {
+        echo 'Packaging webMethods assets is proprietary; integrate with your org tooling.'
+      }
+    }
+  }
+}

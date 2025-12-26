@@ -1,0 +1,17 @@
+{
+  "eventId": "2b6b8ee5-5c39-4a6f-8f47-7fdbf9d61b31",
+  "eventType": "grid.meter.reading",
+  "eventVersion": "v1",
+  "occurredAt": "2025-01-01T10:00:00Z",
+  "sourceSystem": "scada-01",
+  "correlationId": "corr-0001",
+  "partitionKey": "meter-123",
+  "payload": {
+    "meterId": "meter-123",
+    "siteId": "site-75",
+    "readingType": "ACTIVE_POWER",
+    "value": 123.45,
+    "unit": "kW",
+    "readingAt": "2025-01-01T09:59:59Z"
+  }
+}

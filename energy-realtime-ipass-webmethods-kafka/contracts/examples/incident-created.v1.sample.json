@@ -1,0 +1,16 @@
+{
+  "eventId": "11f7a3b6-79d0-4d8a-a7b9-f8b87a3e7cf1",
+  "eventType": "grid.incident.created",
+  "eventVersion": "v1",
+  "occurredAt": "2025-01-01T10:05:00Z",
+  "sourceSystem": "ops-center",
+  "correlationId": "corr-0002",
+  "partitionKey": "incident-901",
+  "payload": {
+    "incidentId": "incident-901",
+    "severity": "HIGH",
+    "status": "CREATED",
+    "siteId": "site-75",
+    "summary": "Perte de télémétrie sur segment A"
+  }
+}

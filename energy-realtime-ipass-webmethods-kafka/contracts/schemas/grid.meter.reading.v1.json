@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/grid.meter.reading.v1.json",
+  "title": "GridMeterReadingEventV1",
+  "type": "object",
+  "required": [
+    "eventId",
+    "eventType",
+    "eventVersion",
+    "occurredAt",
+    "sourceSystem",
+    "correlationId",
+    "partitionKey",
+    "payload"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "eventType": {
+      "type": "string",
+      "const": "grid.meter.reading"
+    },
+    "eventVersion": {
+      "type": "string",
+      "const": "v1"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceSystem": {
+      "type": "string"
+    },
+    "correlationId": {
+      "type": "string"
+    },
+    "partitionKey": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "meterId",
+        "siteId",
+        "readingType",
+        "value",
+        "unit",
+        "readingAt"
+      ],
+      "properties": {
+        "meterId": {
+          "type": "string"
+        },
+        "siteId": {
+          "type": "string"
+        },
+        "readingType": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "readingAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

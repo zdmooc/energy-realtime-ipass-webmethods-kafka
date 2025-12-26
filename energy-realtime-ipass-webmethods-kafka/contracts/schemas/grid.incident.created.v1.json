@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/grid.incident.created.v1.json",
+  "title": "GridIncidentCreatedEventV1",
+  "type": "object",
+  "required": [
+    "eventId",
+    "eventType",
+    "eventVersion",
+    "occurredAt",
+    "sourceSystem",
+    "correlationId",
+    "partitionKey",
+    "payload"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "eventType": {
+      "type": "string",
+      "const": "grid.incident.created"
+    },
+    "eventVersion": {
+      "type": "string",
+      "const": "v1"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceSystem": {
+      "type": "string"
+    },
+    "correlationId": {
+      "type": "string"
+    },
+    "partitionKey": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "incidentId",
+        "severity",
+        "status",
+        "siteId",
+        "summary"
+      ],
+      "properties": {
+        "incidentId": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "CREATED",
+            "ACKED",
+            "IN_PROGRESS",
+            "RESOLVED"
+          ]
+        },
+        "siteId": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
